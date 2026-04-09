@@ -1,0 +1,98 @@
+.shop {
+  padding: 40px;
+  text-align: center;
+}
+
+.shop h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+/* ===================== PRODUCT GRID ===================== */
+.product-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 10px; /* reduced from 20px to 10px */
+  padding: 0 10px; /* optional, adds small padding to grid sides */
+}
+
+/* ===================== PRODUCT CARD ===================== */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  margin: 0; /* remove extra margins if any */
+}
+.product-image {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.size {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.product-info button {
+  padding: 8px;
+  font-size: 14px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.product-info button:hover {
+  background: #333;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+}

@@ -14,6 +14,10 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Checkout from "./pages/Checkout";
+import Footer from "./components/Footer";
+import Saree from "./pages/Saree";
+
+
 
 const App = () => {
   return (
@@ -42,7 +46,9 @@ const App = () => {
 
         {/* Checkout */}
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/category/saree" element={<Saree />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
