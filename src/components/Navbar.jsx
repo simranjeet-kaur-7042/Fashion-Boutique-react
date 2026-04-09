@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "../styles/Navbar.css";
 import logo from "../assets/react.svg";
 import { Link } from "react-router-dom";
 
@@ -10,28 +10,22 @@ const Navbar = () => {
       </div>
 
       <ul className="nav-menu">
-        <li className="active">Home</li>
-        <li>
-          Category <span>▾</span>
-        </li>
-        <li>About Us</li>
-        <li>Contact Us</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/category/saree">Category</Link></li>
+        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/contact">Contact Us</Link></li>
       </ul>
 
       <div className="nav-right">
         <input type="text" placeholder="Search..." />
 
-        <div className="icon cart">
+        <Link to="/cart" className="icon cart">
           🛒 <span className="badge">0</span>
-        </div>
+        </Link>
 
         <div className="auth-buttons">
-          <Link to="/login" className="login-btn">
-            Login
-          </Link>
-          <Link to="/signup" className="signup-btn">
-            Signup
-          </Link>
+          <Link to="/login" className="login-btn">Login</Link>
+          <Link to="/signup" className="signup-btn">Signup</Link>
         </div>
       </div>
     </nav>

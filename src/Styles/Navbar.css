@@ -84,3 +84,15 @@
   background-color: #61dafb; /* React blue */
   color: white;
 }
+
+
+/* Remove underline + default color */
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Optional: hover effect */
+.nav-menu a:hover {
+  color: #ff4d6d;
+}
